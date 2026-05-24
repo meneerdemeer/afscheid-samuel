@@ -126,23 +126,33 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 100px;
+  height: min(28%, 140px);
   background: linear-gradient(
     to bottom,
     transparent 0%,
+    rgba(250, 250, 248, 0.4) 45%,
     var(--bg) 100%
   );
   pointer-events: none;
 }
 
 .hero__img {
-  display: block;
   width: 100%;
-  max-width: 560px;
-  margin: 0 auto;
-  height: auto;
-  object-fit: contain;
+  max-height: min(78vh, 820px);
+  object-fit: cover;
   object-position: center top;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 72%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 72%,
+    transparent 100%
+  );
 }
 
 /* Intro */
@@ -354,9 +364,8 @@ a:hover {
 .form-section__embed iframe {
   display: block;
   width: 100%;
-  height: 2200px;
+  height: 950px;
   border: none;
-  overflow: hidden;
 }
 
 /* Footer */
@@ -439,8 +448,15 @@ a:hover {
 }
 
 @media (max-width: 480px) {
+  .hero__img {
+    max-height: 70vh;
+    object-position: center top;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 68%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 68%, transparent 100%);
+  }
+
   .intro {
-    margin-top: -1.5rem;
+    margin-top: -2rem;
   }
 
   .info__hints {
