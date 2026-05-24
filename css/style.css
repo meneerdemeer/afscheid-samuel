@@ -358,12 +358,14 @@ a:hover {
 .form-section__embed {
   background: var(--surface);
   border: 1px solid var(--line);
-  overflow: hidden;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .form-section__embed iframe {
   display: block;
   width: 100%;
+  min-height: 950px;
   height: 950px;
   border: none;
 }
@@ -462,5 +464,10 @@ a:hover {
   .info__hints {
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .form-section__embed iframe {
+    min-height: 1650px;
+    height: 1650px;
   }
 }

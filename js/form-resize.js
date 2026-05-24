@@ -1,11 +1,35 @@
 const iframe = document.getElementById("condoleance-form");
 if (!iframe) return;
 
-function setFormHeight(height) {
-  const h = Math.ceil(Number(height));
-  if (!Number.isFinite(h) || h < 400) return;
-  iframe.style.height = `${h + 24}px`;
+const MOBILE_QUERY = "(max-width: 480px)";
+const MIN_HEIGHT_DESKTOP = 950;
+const MIN_HEIGHT_MOBILE = 1650;
+const HEIGHT_BUFFER = 64;
+
+function isMobile() {
+  return window.matchMedia(MOBILE_QUERY).matches;
 }
+
+function minHeight() {
+  return isMobile() ? MIN_HEIGHT_MOBILE : MIN_HEIGHT_DESKTOP;
+}
+
+function setFormHeight(height) {
+  const reported = Math.ceil(Number(height));
+  if (!Number.isFinite(reported) || reported < 400) return;
+  const h = Math.max(reported + HEIGHT_BUFFER, minHeight());
+  iframe.style.height = `${h}px`;
+  iframe.style.minHeight = `${h}px`;
+}
+
+function applyFallbackHeight() {
+  const h = minHeight();
+  iframe.style.height = `${h}px`;
+  iframe.style.minHeight = `${h}px`;
+}
+
+applyFallbackHeight();
+window.matchMedia(MOBILE_QUERY).addEventListener("change", applyFallbackHeight);
 
 window.addEventListener("message", (event) => {
   if (event.origin !== "https://docs.google.com") return;
