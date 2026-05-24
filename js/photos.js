@@ -19,13 +19,11 @@ const PHOTOS = [
   "WhatsApp Image 2026-05-24 at 18.05.09.jpeg",
   "WhatsApp Image 2026-05-24 at 18.05.52.jpeg",
   "WhatsApp Image 2026-05-24 at 20.39.10.jpeg",
-  "hoofdfoto.jpg"
+  "WhatsApp Image 2026-05-24 at 20.46.46.jpeg"
 ];
 
-function photoSrc(entry) {
-  const name = typeof entry === "string" ? entry : entry.file;
-  const folder = name === "hoofdfoto.jpg" ? "" : "fotocolage/";
-  return folder + encodeURIComponent(name);
+function photoSrc(name) {
+  return "fotocolage/" + encodeURIComponent(name);
 }
 
 const collage = document.getElementById("collage");
