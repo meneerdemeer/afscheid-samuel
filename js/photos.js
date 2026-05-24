@@ -18,7 +18,7 @@ const PHOTOS = [
   "WhatsApp Image 2026-05-24 at 17.44.12.jpeg",
   "WhatsApp Image 2026-05-24 at 18.05.09.jpeg",
   "WhatsApp Image 2026-05-24 at 18.05.52.jpeg",
-  { file: "hoofdfoto.jpg", wide: true }
+  "hoofdfoto.jpg"
 ];
 
 function photoSrc(entry) {
@@ -31,11 +31,10 @@ const collage = document.getElementById("collage");
 
 PHOTOS.forEach((entry, index) => {
   const src = photoSrc(entry);
-  const isWide = typeof entry === "object" && entry.wide;
 
   const button = document.createElement("button");
   button.type = "button";
-  button.className = "gallery__item" + (isWide ? " gallery__item--wide" : "");
+  button.className = "gallery__item";
   button.setAttribute("role", "listitem");
   button.dataset.index = String(index);
   button.setAttribute("aria-label", `Foto ${index + 1}`);
