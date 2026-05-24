@@ -18,6 +18,7 @@ const PHOTOS = [
   "WhatsApp Image 2026-05-24 at 17.44.12.jpeg",
   "WhatsApp Image 2026-05-24 at 18.05.09.jpeg",
   "WhatsApp Image 2026-05-24 at 18.05.52.jpeg",
+  "WhatsApp Image 2026-05-24 at 20.39.10.jpeg",
   "hoofdfoto.jpg"
 ];
 
