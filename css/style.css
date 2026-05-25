@@ -98,10 +98,14 @@ a:hover {
 
 .header__nav {
   display: flex;
+  align-items: center;
   gap: 1.5rem;
 }
 
 .header__nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.375rem;
   font-size: 0.8125rem;
   letter-spacing: 0.04em;
   text-decoration: none;
@@ -112,18 +116,24 @@ a:hover {
   color: var(--text);
 }
 
-.header__nav a.header__cta {
-  color: #fff;
-  background: var(--accent);
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.375rem;
   padding: 0.5rem 1rem;
-  border-radius: 3px;
+  font-size: 0.8125rem;
   font-weight: 400;
   letter-spacing: 0.03em;
+  text-decoration: none;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 3px;
   box-shadow: 0 1px 4px rgba(61, 61, 59, 0.14);
-  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  transition: background 0.2s, box-shadow 0.2s;
 }
 
-.header__nav a.header__cta:hover {
+.cta-button:hover {
   color: #fff;
   background: #879181;
   box-shadow: 0 2px 8px rgba(61, 61, 59, 0.18);
@@ -308,6 +318,11 @@ a:hover {
   height: 100%;
 }
 
+.info__cta {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
 /* Gallery */
 .gallery {
   max-width: var(--gallery);
@@ -475,7 +490,12 @@ a:hover {
     font-size: 0.75rem;
   }
 
-  .header__nav a.header__cta {
+  .header__nav a,
+  .cta-button {
+    min-height: 2.125rem;
+  }
+
+  .cta-button {
     padding: 0.45rem 0.7rem;
   }
 
