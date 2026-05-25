@@ -19,7 +19,18 @@ const PHOTOS = [
   "WhatsApp Image 2026-05-24 at 18.05.09.jpeg",
   "WhatsApp Image 2026-05-24 at 18.05.52.jpeg",
   "WhatsApp Image 2026-05-24 at 20.39.10.jpeg",
-  "WhatsApp Image 2026-05-24 at 20.46.46.jpeg"
+  "WhatsApp Image 2026-05-24 at 20.39.11.jpeg",
+  "WhatsApp Image 2026-05-24 at 20.46.46.jpeg",
+  "WhatsApp Image 2026-05-24 at 22.24.125.jpeg",
+  "WhatsApp Image 2026-05-24 at 22.24.15.jpeg",
+  "WhatsApp Image 2026-05-24 at 22.24.75616.jpeg",
+  "WhatsApp Image 2026-05-24 at 22.244.15.jpeg",
+  "WhatsApp Image 2026-05-24 at 22.25.39.jpeg",
+  "WhatsApp Image 2026-05-24 at 22.65725.38.jpeg",
+  "WhatsApp Image 2026-05-24 at 2265.24.15.jpeg",
+  "WhatsApp Image 2026-05-24 at 2r2.24.15.jpeg",
+  "WhatsApp Image 2026-05-25 at 16.21.17.jpeg",
+  "WhatsApp Image 2026-05-25 at 16.21.172.jpeg"
 ];
 
 function photoSrc(name) {
