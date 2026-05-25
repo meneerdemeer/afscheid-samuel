@@ -112,6 +112,23 @@ a:hover {
   color: var(--text);
 }
 
+.header__nav a.header__cta {
+  color: #fff;
+  background: var(--accent);
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  box-shadow: 0 1px 4px rgba(61, 61, 59, 0.14);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.header__nav a.header__cta:hover {
+  color: #fff;
+  background: #879181;
+  box-shadow: 0 2px 8px rgba(61, 61, 59, 0.18);
+}
+
 /* Hero */
 .hero {
   position: relative;
@@ -450,6 +467,18 @@ a:hover {
 }
 
 @media (max-width: 480px) {
+  .header__nav {
+    gap: 0.625rem;
+  }
+
+  .header__nav a {
+    font-size: 0.75rem;
+  }
+
+  .header__nav a.header__cta {
+    padding: 0.45rem 0.7rem;
+  }
+
   .hero__img {
     max-height: 70vh;
     object-position: center top;
