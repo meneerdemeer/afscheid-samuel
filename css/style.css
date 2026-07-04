@@ -229,6 +229,23 @@ a:hover {
   letter-spacing: 0.02em;
 }
 
+/* Thank you */
+.thank {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+
+.thank__text {
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.75;
+}
+
 /* Info */
 .info {
   max-width: var(--wrap);
@@ -336,6 +353,11 @@ a:hover {
   max-width: var(--gallery);
   margin: 0 auto;
   padding: 0 1.5rem 4rem;
+}
+
+.gallery--follow {
+  padding-top: 4rem;
+  border-top: 1px solid var(--line);
 }
 
 .section-heading {
